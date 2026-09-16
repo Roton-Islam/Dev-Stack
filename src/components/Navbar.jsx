@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-10 border-b border-gray-100 bg-white">
+    <header className="sticky top-0 z-40 border-b border-gray-100 bg-white">
       <nav className="relative mx-auto flex h-[50px] max-w-[1180px] items-center px-4 md:h-[68px] md:px-2">
         <button
           type="button"
