@@ -13,7 +13,7 @@
     "id": "nextjs",
     "name": "Next.js",
     "category": "Frontend",
-    "description": "A powerful React framework for building fast, scalable, and production-ready web applications.",
+    "description": "A powerful React framework is for building fast, scalable, and production-ready web applications.",
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
