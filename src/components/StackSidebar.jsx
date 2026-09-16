@@ -1,0 +1,72 @@
+const StackSidebar = ({ stack, onRemove, onRemoveAll }) => {
+  return (
+    <aside className="h-fit rounded-xl border border-gray-200 bg-white p-5 shadow-sm lg:sticky lg:top-24">
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-lg font-bold text-gray-900">Your Stack</h2>
+
+          <p className="mt-1 text-xs text-gray-500">
+            {stack.length} Technology{" "}
+            {stack.length === 1 ? "Selected" : "Selected"}
+          </p>
+        </div>
+
+        {stack.length > 0 && (
+          <button
+            onClick={onRemoveAll}
+            className="text-xs font-semibold text-red-500 hover:text-red-600"
+          >
+            Remove All
+          </button>
+        )}
+      </div>
+
+      {stack.length === 0 ? (
+        <div className="mt-6 rounded-lg border border-dashed border-gray-200 p-6 text-center">
+          <p className="mt-3 text-sm font-medium text-gray-700">
+            Your stack is empty
+          </p>
+
+          <p className="mt-1 text-xs leading-5 text-gray-400">
+            Add technologies from the list to build your stack.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-5 space-y-3">
+          {stack.map((technology) => (
+            <div
+              key={technology.id}
+              className="flex items-center gap-3 rounded-lg border border-gray-100 p-3"
+            >
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-gray-50 p-1.5">
+                <img
+                  src={technology.icon}
+                  alt={technology.name}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+
+              <div className="min-w-0 flex-1">
+                <h3 className="truncate text-sm font-semibold text-gray-800">
+                  {technology.name}
+                </h3>
+
+                <p className="text-xs text-gray-400">{technology.category}</p>
+              </div>
+
+              <button
+                onClick={() => onRemove(technology.id)}
+                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-gray-400 hover:bg-red-50 hover:text-red-500"
+                aria-label={`Remove ${technology.name}`}
+              >
+                ✕
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </aside>
+  );
+};
+
+export default StackSidebar;
