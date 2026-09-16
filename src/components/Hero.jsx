@@ -14,7 +14,7 @@ const Hero = () => {
 
           <p className="mt-5 max-w-xl text-sm leading-6 text-gray-500 md:text-base">
             Explore modern frontend, backend, database, DevOps, and development
-            tools to create the perfect technology stack for your next project.
+            tools to create perfect technology stack for your next project.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
