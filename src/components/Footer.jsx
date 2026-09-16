@@ -131,14 +131,14 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-5 sm:justify-end">
             <a
               href="#privacy"
-              className="text-[10px] text-slate-400 transition-colors duration-200 hover:text-gray-900"
+              className="text-[11px] text-slate-400 transition-colors duration-200 hover:text-gray-900"
             >
               Privacy
             </a>
 
             <a
               href="#terms"
-              className="text-[10px] text-slate-400 transition-colors duration-200 hover:text-gray-900"
+              className="text-[11px] text-slate-400 transition-colors duration-200 hover:text-gray-900"
             >
               Terms
             </a>
